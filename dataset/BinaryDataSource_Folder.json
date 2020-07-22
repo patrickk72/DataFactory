@@ -7,11 +7,13 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"Container": {
-				"type": "String"
-			},
 			"Directory": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "sink"
+			},
+			"Container": {
+				"type": "string",
+				"defaultValue": "none"
 			}
 		},
 		"annotations": [],
@@ -20,11 +22,11 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"folderPath": {
-					"value": "@{dataset().Directory}",
+					"value": "@dataset().Directory",
 					"type": "Expression"
 				},
 				"container": {
-					"value": "@{dataset().Container}",
+					"value": "@dataset().Container",
 					"type": "Expression"
 				}
 			}
