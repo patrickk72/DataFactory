@@ -239,16 +239,20 @@
 		],
 		"parameters": {
 			"SourceStore_Location": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "storpjkdev"
 			},
 			"SourceStore_Directory": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "sink"
 			},
 			"DestinationStore_Location": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "storpjkdev"
 			},
 			"DestinationStore_Directory": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "staging"
 			}
 		},
 		"annotations": []
