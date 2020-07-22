@@ -22,11 +22,11 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"folderPath": {
-					"value": "@{dataset().Directory}",
+					"value": "@dataset().Directory",
 					"type": "Expression"
 				},
 				"container": {
-					"value": "@{dataset().Container}",
+					"value": "@dataset().Container",
 					"type": "Expression"
 				}
 			}
