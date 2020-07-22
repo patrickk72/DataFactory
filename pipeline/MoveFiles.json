@@ -239,7 +239,7 @@
 		"parameters": {
 			"SourceStore_Location": {
 				"type": "String",
-				"defaultValue": " \\"
+				"defaultValue": "sink"
 			},
 			"SourceStore_Directory": {
 				"type": "String",
@@ -247,7 +247,7 @@
 			},
 			"DestinationStore_Location": {
 				"type": "String",
-				"defaultValue": " \\"
+				"defaultValue": "staging"
 			},
 			"DestinationStore_Directory": {
 				"type": "String",
