@@ -7,7 +7,14 @@
 				"name": "GetFileList",
 				"description": "Get the list of file",
 				"type": "GetMetadata",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "ValidateFiles",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -21,10 +28,6 @@
 						"referenceName": "BinaryDataSource_Folder",
 						"type": "DatasetReference",
 						"parameters": {
-							"Container": {
-								"value": "@pipeline().parameters.SourceStore_Location",
-								"type": "Expression"
-							},
 							"Directory": {
 								"value": "@pipeline().parameters.SourceStore_Directory",
 								"type": "Expression"
@@ -207,12 +210,36 @@
 						"type": "Expression"
 					}
 				}
+			},
+			{
+				"name": "ValidateFiles",
+				"type": "Validation",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "BinaryDataSource_Folder",
+						"type": "DatasetReference",
+						"parameters": {
+							"Directory": {
+								"value": "@pipeline().parameters.SourceStore_Directory",
+								"type": "Expression"
+							},
+							"Container": {
+								"value": "@pipeline().parameters.SourceStore_Directory",
+								"type": "Expression"
+							}
+						}
+					},
+					"timeout": "7.00:00:00",
+					"sleep": 10
+				}
 			}
 		],
 		"parameters": {
 			"SourceStore_Location": {
 				"type": "String",
-				"defaultValue": " "
+				"defaultValue": " \\"
 			},
 			"SourceStore_Directory": {
 				"type": "String",
@@ -220,7 +247,7 @@
 			},
 			"DestinationStore_Location": {
 				"type": "String",
-				"defaultValue": " "
+				"defaultValue": " \\"
 			},
 			"DestinationStore_Directory": {
 				"type": "String",
