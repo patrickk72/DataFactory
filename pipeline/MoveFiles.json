@@ -226,13 +226,14 @@
 								"type": "Expression"
 							},
 							"Container": {
-								"value": "@pipeline().parameters.SourceStore_Directory",
+								"value": "@pipeline().parameters.SourceStore_Location",
 								"type": "Expression"
 							}
 						}
 					},
 					"timeout": "7.00:00:00",
-					"sleep": 10
+					"sleep": 10,
+					"childItems": true
 				}
 			}
 		],
