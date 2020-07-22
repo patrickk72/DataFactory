@@ -7,11 +7,9 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"Container": {
-				"type": "String"
-			},
 			"Directory": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "sink"
 			}
 		},
 		"annotations": [],
