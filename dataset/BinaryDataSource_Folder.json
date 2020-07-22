@@ -10,6 +10,10 @@
 			"Directory": {
 				"type": "String",
 				"defaultValue": "sink"
+			},
+			"Container": {
+				"type": "string",
+				"defaultValue": "none"
 			}
 		},
 		"annotations": [],
