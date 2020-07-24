@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "df-pjk-dev"
+		},
+		"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
+			"value": "https://kv-pjk-dev.vault.azure.net/"
+		},
+		"storageLS_properties_typeProperties_connectionString_secretName": {
+			"value": "key-stor-pjk-dev"
+		},
+		"MoveFilesDaily2359_properties_MoveFiles_parameters_SourceStore_Location": {
+			"value": "sink"
+		},
+		"MoveFilesDaily2359_properties_MoveFiles_parameters_SourceStore_Directory": {
+			"value": "sink"
+		},
+		"MoveFilesDaily2359_properties_MoveFiles_parameters_DestinationStore_Location": {
+			"value": "staging"
+		},
+		"MoveFilesDaily2359_properties_MoveFiles_parameters_DestinationStore_Directory": {
+			"value": "staging"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
